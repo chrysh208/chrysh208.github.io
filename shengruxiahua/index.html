@@ -1,0 +1,592 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="生如夏花 - 泰戈尔经典诗歌全文赏析、创作背景解读及经典名句摘录。探索生命短暂与绚烂的哲学意义，感受诗人对生命态度的深刻思考。">
+    <meta name="keywords" content="生如夏花, 泰戈尔, 泰戈尔诗集, 诗歌赏析, 经典名句">
+    <title>生如夏花 - 泰戈尔经典诗歌赏析与生命哲思</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #d35400;
+            --secondary-color: #f39c12;
+            --bg-color: #fdfbf7;
+            --text-color: #2c3e50;
+            --light-text: #7f8c8d;
+            --white: #ffffff;
+            --card-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            --transition: all 0.3s ease;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", -apple-system, BlinkMacSystemFont, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            line-height: 1.8;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header */
+        header {
+            background: var(--white);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+
+        .nav-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+            height: 70px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            font-size: 0.9rem;
+            font-weight: 400;
+            color: var(--light-text);
+            display: none;
+        }
+
+        @media(min-width: 768px) {
+            .logo span { display: inline; }
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 1rem;
+            font-weight: 500;
+            color: var(--text-color);
+            transition: var(--transition);
+            position: relative;
+        }
+
+        nav a:hover {
+            color: var(--primary-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: var(--transition);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(135deg, #fdfbf7 0%, #fcefe9 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            z-index: 2;
+            max-width: 800px;
+            padding: 20px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+            letter-spacing: 2px;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--light-text);
+            margin-bottom: 30px;
+        }
+
+        .hero-decoration {
+            position: absolute;
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            background-image: radial-gradient(#d35400 1px, transparent 1px);
+            background-size: 30px 30px;
+            opacity: 0.1;
+        }
+
+        /* Container */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 60px 20px;
+        }
+
+        /* Section Styling */
+        section {
+            margin-bottom: 80px;
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header h2 {
+            font-size: 2rem;
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-header h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 3px;
+            background: var(--secondary-color);
+            margin: 10px auto 0;
+            border-radius: 2px;
+        }
+
+        .section-header p {
+            color: var(--light-text);
+        }
+
+        /* Poem Card */
+        .poem-card {
+            background: var(--white);
+            border-radius: 12px;
+            padding: 40px;
+            box-shadow: var(--card-shadow);
+            border-top: 4px solid var(--primary-color);
+            text-align: center;
+        }
+
+        .poem-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            color: var(--text-color);
+        }
+
+        .poem-content {
+            font-size: 1.2rem;
+            line-height: 2.2;
+            color: #34495e;
+            white-space: pre-line;
+        }
+
+        .poem-author {
+            margin-top: 40px;
+            font-size: 1rem;
+            color: var(--light-text);
+            font-style: italic;
+        }
+
+        /* Analysis Grid */
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+
+        .analysis-item {
+            background: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: var(--card-shadow);
+            transition: var(--transition);
+            border: 1px solid #eee;
+        }
+
+        .analysis-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .icon-box {
+            width: 50px;
+            height: 50px;
+            background: rgba(211, 84, 0, 0.1);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            color: var(--primary-color);
+        }
+
+        .analysis-item h3 {
+            font-size: 1.25rem;
+            margin-bottom: 15px;
+        }
+
+        .analysis-item p {
+            font-size: 0.95rem;
+            color: var(--light-text);
+        }
+
+        /* Quotes Section */
+        .quotes-section {
+            background-color: #fff3e0;
+            border-radius: 12px;
+            padding: 60px 40px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .quote-item {
+            font-size: 1.5rem;
+            font-weight: 500;
+            color: var(--primary-color);
+            margin: 20px 0;
+            max-width: 800px;
+            position: relative;
+        }
+
+        .quote-item::before, .quote-item::after {
+            content: '"';
+            font-size: 3rem;
+            position: absolute;
+            opacity: 0.3;
+            font-family: serif;
+        }
+
+        .quote-item::before { top: -30px; left: -20px; }
+        .quote-item::after { bottom: -50px; right: -20px; }
+
+        /* FAQ */
+        .faq-grid {
+            display: grid;
+            grid-template-columns: 1fr;
+            gap: 20px;
+        }
+
+        .faq-item {
+            background: var(--white);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+        }
+
+        .faq-question {
+            padding: 20px 25px;
+            background: var(--white);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            transition: background 0.3s;
+        }
+
+        .faq-question:hover {
+            background: #f9f9f9;
+        }
+
+        .faq-answer {
+            padding: 0 25px;
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out, padding 0.3s ease;
+            color: var(--light-text);
+            font-size: 0.95rem;
+        }
+
+        .faq-item.active .faq-answer {
+            padding: 20px 25px;
+            max-height: 200px;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--primary-color);
+        }
+
+        .arrow {
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .arrow {
+            transform: rotate(180deg);
+        }
+
+        /* Footer */
+        footer {
+            background: #2c3e50;
+            color: #ecf0f1;
+            padding: 60px 20px 20px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: var(--secondary-color);
+        }
+
+        .footer-col p {
+            color: #bdc3c7;
+            font-size: 0.9rem;
+            margin-bottom: 10px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+            transition: color 0.3s;
+        }
+
+        .footer-links a:hover {
+            color: var(--secondary-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #34495e;
+            color: #7f8c8d;
+            font-size: 0.85rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero h1 { font-size: 2rem; }
+            .nav-container { padding: 0 15px; }
+            nav ul { gap: 15px; }
+            nav a { font-size: 0.9rem; }
+            .poem-card { padding: 25px; }
+            .poem-content { font-size: 1rem; }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path></svg>
+                生如夏花
+                <span>诗集赏析</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a href="#poem">诗歌全文</a></li>
+                    <li><a href="#analysis">深度解读</a></li>
+                    <li><a href="#quotes">经典名句</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="hero-decoration"></div>
+            <div class="hero-content">
+                <h1>生如夏花</h1>
+                <p>探索泰戈尔笔下的生命哲学，感受短暂与绚烂交织的永恒之美。</p>
+            </div>
+        </section>
+
+        <!-- Poem Content -->
+        <section id="poem" class="container">
+            <div class="section-header">
+                <h2>诗歌全文</h2>
+                <p>《飞鸟集》第82首</p>
+            </div>
+            <div class="poem-card">
+                <h3 class="poem-title">生如夏花</h3>
+                <div class="poem-content">生如夏花之绚烂，死如秋叶之静美。</div>
+                <div class="poem-author">—— 泰戈尔</div>
+            </div>
+        </section>
+
+        <!-- Analysis Section -->
+        <section id="analysis" class="container">
+            <div class="section-header">
+                <h2>深度解读</h2>
+                <p>理解这句诗背后的生命态度与美学意义</p>
+            </div>
+            <div class="analysis-grid">
+                <article class="analysis-item">
+                    <div class="icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><path d="M8 14s1.5 2 4 2 4-2 4-2"></path><line x1="9" y1="9" x2="9.01" y2="9"></line><line x1="15" y1="9" x2="15.01" y2="9"></line></svg>
+                    </div>
+                    <h3>生命的极致绚烂</h3>
+                    <p>“夏花”象征生命最旺盛、最热烈的时刻。泰戈尔认为，人应当像夏天的花朵一样，在有限的生命里尽情绽放，释放出全部的光彩与能量，不留遗憾。</p>
+                </article>
+                <article class="analysis-item">
+                    <div class="icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+                    </div>
+                    <h3>面对死亡的静美</h3>
+                    <p>“秋叶之静美”则描绘了死亡应有的姿态。并非恐惧或痛苦的消逝，而是一种自然的回归、一种从容的谢幕。这种“静”体现了对生命终点的超然与接纳。</p>
+                </article>
+                <article class="analysis-item">
+                    <div class="icon-box">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                    </div>
+                    <h3>生死的辩证统一</h3>
+                    <p>这两句诗构成了生与死、动与静的完美辩证。生要热烈，死要安详。它们共同描绘了一种理想的生命状态：在过程中全力以赴，在终结时平静释怀。</p>
+                </article>
+            </div>
+        </section>
+
+        <!-- Quotes Section -->
+        <section id="quotes" class="container">
+            <div class="quotes-section">
+                <h2>经典名句</h2>
+                <div class="quote-item">“须臾的永恒，刹那的圆满。”</div>
+                <div class="quote-item">“我们把世界看错，反说它欺骗了我们。”</div>
+                <div class="quote-item">“世界以痛吻我，要我报之以歌。”</div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container">
+            <div class="section-header">
+                <h2>常见问题</h2>
+                <p>关于《生如夏花》的常见疑问解答</p>
+            </div>
+            <div class="faq-grid">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        《生如夏花》是哪部作品里的？
+                        <svg class="arrow" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        它出自印度诗人泰戈尔的诗集《飞鸟集》（Stray Birds），第82首诗。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        夏花和秋叶分别象征着什么？
+                        <svg class="arrow" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        夏花象征着生命最热烈、最活跃的绽放状态；秋叶则象征着生命终结后回归自然、平静安详的状态。
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question">
+                        这句话对现代人的生活有什么启示？
+                        <svg class="arrow" width="20" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="6 9 12 15 18 9"></polyline></svg>
+                    </div>
+                    <div class="faq-answer">
+                        它提醒我们在有限的生命中要追求极致的热情与价值，同时也要学会以平和的心态面对生活中的失去与终结，保持内心的宁静。
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <h4>关于生如夏花</h4>
+                <p>致力于传播泰戈尔等伟大诗人的文学经典，探索生命与自然的深刻联系。</p>
+            </div>
+            <div class="footer-col">
+                <h4>快速链接</h4>
+                <ul class="footer-links">
+                    <li><a href="#poem">诗歌全文</a></li>
+                    <li><a href="#analysis">深度解读</a></li>
+                    <li><a href="#quotes">经典名句</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>相关资源</h4>
+                <ul class="footer-links">
+                    <li><a href="#">泰戈尔全集</a></li>
+                    <li><a href="#">飞鸟集赏析</a></li>
+                    <li><a href="#">吉檀迦利</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 生如夏花诗集赏析. 保留所有权利.</p>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+        });
+    </script>
+</body>
+  </html>
