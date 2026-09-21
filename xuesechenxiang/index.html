@@ -1,0 +1,666 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>血色沉香-古风悬疑探案与历史传奇小说阅读平台</title>
+    <meta name="description" content="血色沉香，一部融合悬疑推理与历史传奇的古风小说。讲述在动荡年代，一位落魄探案高手如何拨开层层迷雾，揭开家族与国家背后的血色秘密，沉香木下掩埋的真相等待被发掘。提供正版章节阅读、角色分析及作者介绍。">
+    <meta name="keywords" content="血色沉香,古风小说,悬疑推理,历史传奇,小说阅读,在线小说">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #8B0000;
+            --primary-hover: #A50000;
+            --accent-color: #D4AF37;
+            --bg-dark: #1a1a1a;
+            --bg-card: #252525;
+            --text-main: #f0f0f0;
+            --text-muted: #a0a0a0;
+            --border-color: #333;
+            --spacing-unit: 16px;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "PingFang SC", "Microsoft YaHei", "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Layout */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        /* Header */
+        header {
+            background-color: rgba(26, 26, 26, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: bold;
+            color: var(--accent-color);
+            letter-spacing: 2px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--text-main);
+            font-size: 16px;
+            font-weight: normal;
+            opacity: 0.8;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 16px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--accent-color);
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--accent-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after, nav a.active::after {
+            width: 100%;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 8px 20px;
+            border-radius: 4px;
+            font-size: 14px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: 1px solid transparent;
+        }
+
+        .btn-outline {
+            border-color: var(--text-muted);
+            color: var(--text-main);
+        }
+
+        .btn-outline:hover {
+            border-color: var(--accent-color);
+            color: var(--accent-color);
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            background: linear-gradient(to right, rgba(0,0,0,0.9), rgba(0,0,0,0.6)), url('https://picsum.photos/seed/scent/1920/1080.jpg') no-repeat center center/cover;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero-tag {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 4px 12px;
+            font-size: 12px;
+            border-radius: 2px;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: #ccc;
+            margin-bottom: 30px;
+            line-height: 1.8;
+        }
+
+        .hero-stats {
+            display: flex;
+            gap: 40px;
+            margin-top: 30px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+        }
+
+        .stat-item h4 {
+            font-size: 24px;
+            color: var(--accent-color);
+        }
+
+        .stat-item span {
+            font-size: 14px;
+            color: var(--text-muted);
+        }
+
+        /* Main Content Grid */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 30px;
+            margin-top: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Chapter List */
+        .section-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+            padding-left: 15px;
+            border-left: 4px solid var(--accent-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .chapter-list {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .chapter-item {
+            padding: 20px;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .chapter-item:hover {
+            background-color: #2a2a2a;
+        }
+
+        .chapter-item:last-child {
+            border-bottom: none;
+        }
+
+        .chapter-title {
+            font-size: 16px;
+            font-weight: 500;
+            color: var(--text-main);
+        }
+
+        .chapter-info {
+            font-size: 13px;
+            color: var(--text-muted);
+            display: flex;
+            gap: 15px;
+        }
+
+        .chapter-tag {
+            color: var(--primary-color);
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background-color: var(--bg-card);
+            border-radius: 8px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .widget-title {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .character-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 15px;
+        }
+
+        .character-card {
+            background-color: var(--bg-dark);
+            padding: 15px;
+            border-radius: 4px;
+            text-align: center;
+            border: 1px solid transparent;
+            transition: border-color 0.3s;
+        }
+
+        .character-card:hover {
+            border-color: var(--accent-color);
+        }
+
+        .character-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            margin: 0 auto 10px;
+            object-fit: cover;
+            border: 2px solid var(--accent-color);
+        }
+
+        .character-name {
+            font-size: 14px;
+            font-weight: bold;
+            margin-bottom: 5px;
+        }
+
+        .character-role {
+            font-size: 12px;
+            color: var(--text-muted);
+        }
+
+        /* Synopsis Box */
+        .synopsis-box {
+            background: linear-gradient(135deg, #2c2c2c, #1f1f1f);
+            padding: 20px;
+            border-radius: 8px;
+            font-size: 14px;
+            color: #ddd;
+            border-left: 3px solid var(--primary-color);
+        }
+
+        /* News & Updates */
+        .news-list li {
+            padding: 15px 0;
+            border-bottom: 1px solid var(--border-color);
+            display: flex;
+            gap: 10px;
+        }
+
+        .news-date {
+            min-width: 60px;
+            font-size: 12px;
+            color: var(--text-muted);
+            text-align: right;
+        }
+
+        .news-content a {
+            font-size: 14px;
+            color: var(--text-main);
+        }
+
+        .news-content a:hover {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: #111;
+            border-top: 1px solid var(--border-color);
+            padding: 50px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h3 {
+            font-size: 16px;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--accent-color);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #222;
+            color: #666;
+            font-size: 13px;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 14px;
+            }
+
+            .hero {
+                height: auto;
+                padding: 60px 0;
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: 0 auto;
+            }
+
+            .hero-stats {
+                justify-content: center;
+            }
+
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .character-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <a href="#" class="logo">血色沉香 <span>Novel</span></a>
+            <nav>
+                <ul>
+                    <li><a href="#" class="active">首页</a></li>
+                    <li><a href="#">章节目录</a></li>
+                    <li><a href="#">角色图鉴</a></li>
+                    <li><a href="#">书评互动</a></li>
+                </ul>
+            </nav>
+            <div class="header-actions">
+                <button class="btn btn-outline">登录</button>
+                <button class="btn btn-primary">注册</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <span class="hero-tag">古风悬疑</span>
+                    <h1>血色沉香</h1>
+                    <p>一把锈迹斑斑的匕首，一段尘封百年的往事。在香料的香气掩盖下，真相往往比鲜血更刺骨。跟随主角沈沉香，在乱世中揭开家族兴衰的残酷真相。</p>
+                    <div class="hero-stats">
+                        <div class="stat-item">
+                            <h4>128.5万</h4>
+                            <span>字数</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>5800+</h4>
+                            <span>收藏</span>
+                        </div>
+                        <div class="stat-item">
+                            <h4>4.8</h4>
+                            <span>评分</span>
+                        </div>
+                    </div>
+                    <div style="margin-top: 30px;">
+                        <button class="btn btn-primary" style="padding: 12px 30px; font-size: 16px;">开始阅读</button>
+                        <button class="btn btn-outline" style="padding: 12px 30px; font-size: 16px; margin-left: 10px;">加入书架</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <div class="container main-layout">
+            <!-- Left Content -->
+            <div class="content-area">
+                <!-- Synopsis -->
+                <section class="sidebar-widget">
+                    <h2 class="section-title">作品简介</h2>
+                    <div class="synopsis-box">
+                        <p>大周王朝末年，天下大乱。南疆边陲的小城云溪镇，因一种名为“沉香”的奇珍而名噪一时。然而，这香气背后却隐藏着足以颠覆皇权的惊天阴谋。</p>
+                        <br>
+                        <p>落魄探案师沈沉香，本无意卷入这浑水，却因一桩离奇命案被迫踏上寻凶之路。随着调查的深入，他发现凶手似乎与百年前的一桩旧案有着千丝万缕的联系，而线索竟指向了云溪镇赵家的祖宅。</p>
+                        <br>
+                        <p>在这场权力的游戏中，沈沉香不仅要面对来自官府的压迫，还要提防身边人的背叛。当血色染红沉香木，当真相大白于天下，他才发现，自己早已深陷其中，无法自拔。</p>
+                    </div>
+                </section>
+
+                <!-- Chapters -->
+                <section>
+                    <div class="section-title">
+                        <span>最新章节</span>
+                        <a href="#" style="font-size: 14px; color: var(--accent-color);">查看全部 ></a>
+                    </div>
+                    <div class="chapter-list">
+                        <div class="chapter-item">
+                            <div class="chapter-title">第425章：暗夜之火</div>
+                            <div class="chapter-info">
+                                <span class="chapter-tag">VIP</span>
+                                <span>2023-10-24</span>
+                            </div>
+                        </div>
+                        <div class="chapter-item">
+                            <div class="chapter-title">第424章：最后的晚餐</div>
+                            <div class="chapter-info">
+                                <span>2023-10-23</span>
+                            </div>
+                        </div>
+                        <div class="chapter-item">
+                            <div class="chapter-title">第423章：故人归来</div>
+                            <div class="chapter-info">
+                                <span>2023-10-22</span>
+                            </div>
+                        </div>
+                        <div class="chapter-item">
+                            <div class="chapter-title">第422章：破局</div>
+                            <div class="chapter-info">
+                                <span>2023-10-21</span>
+                            </div>
+                        </div>
+                        <div class="chapter-item">
+                            <div class="chapter-title">第421章：迷雾重重</div>
+                            <div class="chapter-info">
+                                <span>2023-10-20</span>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+
+            <!-- Right Sidebar -->
+            <aside class="sidebar">
+                <!-- Characters -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">核心角色</h3>
+                    <div class="character-grid">
+                        <div class="character-card">
+                            <img src="https://picsum.photos/seed/character1/100/100.jpg" alt="沈沉香" class="character-avatar">
+                            <div class="character-name">沈沉香</div>
+                            <div class="character-role">主角 / 探案师</div>
+                        </div>
+                        <div class="character-card">
+                            <img src="https://picsum.photos/seed/character2/100/100.jpg" alt="柳如烟" class="character-avatar">
+                            <div class="character-name">柳如烟</div>
+                            <div class="character-role">红颜知己 / 医者</div>
+                        </div>
+                        <div class="character-card">
+                            <img src="https://picsum.photos/seed/character3/100/100.jpg" alt="赵无极" class="character-avatar">
+                            <div class="character-name">赵无极</div>
+                            <div class="character-role">反派 / 宗族家主</div>
+                        </div>
+                        <div class="character-card">
+                            <img src="https://picsum.photos/seed/character4/100/100.jpg" alt="李长风" class="character-avatar">
+                            <div class="character-name">李长风</div>
+                            <div class="character-role">朝廷探子</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Updates -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">站内动态</h3>
+                    <ul class="news-list">
+                        <li>
+                            <div class="news-date">10-24</div>
+                            <div class="news-content"><a href="#">《血色沉香》第425章更新完毕</a></div>
+                        </li>
+                        <li>
+                            <div class="news-date">10-20</div>
+                            <div class="news-content"><a href="#">作者公告：近期更新时间调整通知</a></div>
+                        </li>
+                        <li>
+                            <div class="news-date">10-15</div>
+                            <div class="news-content"><a href="#">新角色“红衣刺客”形象设计曝光</a></div>
+                        </li>
+                    </ul>
+                </div>
+
+                <!-- Tags -->
+                <div class="sidebar-widget">
+                    <h3 class="widget-title">热门标签</h3>
+                    <div style="display: flex; flex-wrap: wrap; gap: 8px;">
+                        <a href="#" class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">悬疑</a>
+                        <a href="#" class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">古风</a>
+                        <a href="#" class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">探案</a>
+                        <a href="#" class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">权谋</a>
+                        <a href="#" class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">复仇</a>
+                        <a href="#" class="btn btn-outline" style="padding: 5px 10px; font-size: 12px;">剧情</a>
+                    </div>
+                </div>
+            </aside>
+        </div>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>关于我们</h3>
+                    <p style="color: #666; font-size: 14px; line-height: 1.8;">
+                        致力于为读者提供最优质的古风小说阅读体验。在这里，你可以找到最精彩的历史传奇与悬疑故事。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">排行榜</a></li>
+                        <li><a href="#">分类浏览</a></li>
+                        <li><a href="#">作者专区</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>帮助中心</h3>
+                    <ul>
+                        <li><a href="#">阅读指南</a></li>
+                        <li><a href="#">投稿须知</a></li>
+                        <li><a href="#">版权声明</a></li>
+                        <li><a href="#">联系客服</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>关注我们</h3>
+                    <ul>
+                        <li><a href="#">微信公众号</a></li>
+                        <li><a href="#">官方微博</a></li>
+                        <li><a href="#">QQ粉丝群</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                &copy; 2023 血色沉香阅读网 版权所有 | 仅供演示，请勿转载
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
