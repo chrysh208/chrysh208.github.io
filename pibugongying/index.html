@@ -1,0 +1,886 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>坯布供应商-源头工厂直销与纺织面料采购指南</title>
+    <meta name="description" content="专业坯布供应商，提供全棉、涤棉、麻棉等各类坯布批发服务。源头工厂直供，支持定制，拥有先进染整工艺与质量检测体系。欢迎浏览最新坯布价格表与库存信息。">
+    <meta name="keywords" content="坯布供应商,坯布批发,面料工厂,全棉坯布,涤棉坯布,染色坯布,纺织面料">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --accent-color: #d35400;
+            --bg-light: #f9f9f9;
+            --bg-white: #ffffff;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+            --shadow-sm: 0 2px 4px rgba(0,0,0,0.05);
+            --shadow-md: 0 4px 12px rgba(0,0,0,0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: "Helvetica Neue", Helvetica, Arial, "PingFang SC", "Hiragino Sans GB", "Microsoft YaHei", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: var(--bg-white);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        /* Utility */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-color);
+            color: white;
+            border: 1px solid var(--accent-color);
+        }
+
+        .btn-primary:hover {
+            background-color: #e67e22;
+            border-color: #e67e22;
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 1px solid var(--primary-color);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+        }
+
+        .section-title p {
+            color: var(--text-gray);
+            font-size: 1rem;
+        }
+
+        /* Header */
+        header {
+            background-color: var(--bg-white);
+            box-shadow: var(--shadow-sm);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--primary-color);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--primary-color);
+        }
+
+        nav a:hover {
+            color: var(--accent-color);
+        }
+
+        .header-contact {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .phone-number {
+            font-weight: 700;
+            color: var(--accent-color);
+            font-size: 1.1rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(44, 62, 80, 0.8), rgba(44, 62, 80, 0.8)), url('https://picsum.photos/seed/fabric_hero/1920/600.jpg') center/cover no-repeat;
+            color: white;
+            padding: 100px 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .hero p {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-actions {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        /* Features */
+        .features {
+            padding: 60px 0;
+            background-color: var(--bg-light);
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+        }
+
+        .feature-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            text-align: center;
+            box-shadow: var(--shadow-sm);
+            transition: transform 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: var(--shadow-md);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            color: var(--accent-color);
+        }
+
+        .feature-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+
+        /* Categories */
+        .categories {
+            padding: 80px 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+            gap: 20px;
+        }
+
+        .category-item {
+            position: relative;
+            border-radius: 8px;
+            overflow: hidden;
+            height: 250px;
+            cursor: pointer;
+        }
+
+        .category-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s ease;
+        }
+
+        .category-item:hover img {
+            transform: scale(1.1);
+        }
+
+        .category-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.8), transparent);
+            padding: 20px;
+            color: white;
+        }
+
+        /* Product Showcase */
+        .products {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .product-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+            transition: box-shadow 0.3s ease;
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-md);
+        }
+
+        .product-img {
+            height: 200px;
+            overflow: hidden;
+        }
+
+        .product-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .product-info {
+            padding: 20px;
+        }
+
+        .product-title {
+            font-size: 1.1rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            color: var(--primary-color);
+        }
+
+        .product-specs {
+            font-size: 0.9rem;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+        }
+
+        .spec-tag {
+            background-color: #f0f0f0;
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        .product-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+        }
+
+        .price {
+            color: var(--accent-color);
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* About / Process */
+        .process-section {
+            padding: 80px 0;
+        }
+
+        .process-steps {
+            display: flex;
+            justify-content: space-between;
+            position: relative;
+            margin-top: 50px;
+        }
+
+        .process-steps::before {
+            content: '';
+            position: absolute;
+            top: 40px;
+            left: 0;
+            width: 100%;
+            height: 2px;
+            background-color: var(--border-color);
+            z-index: 0;
+        }
+
+        .step-item {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+            flex: 1;
+        }
+
+        .step-icon {
+            width: 80px;
+            height: 80px;
+            background-color: white;
+            border: 2px solid var(--accent-color);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 20px;
+            font-size: 1.5rem;
+            color: var(--accent-color);
+            font-weight: bold;
+        }
+
+        .step-item h3 {
+            margin-bottom: 10px;
+            color: var(--primary-color);
+        }
+
+        /* FAQ */
+        .faq {
+            padding: 80px 0;
+            background-color: var(--bg-light);
+        }
+
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background: white;
+            margin-bottom: 15px;
+            border-radius: 6px;
+            overflow: hidden;
+            box-shadow: var(--shadow-sm);
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: var(--primary-color);
+        }
+
+        .faq-question:hover {
+            background-color: #f9f9f9;
+        }
+
+        .faq-answer {
+            padding: 0 20px 20px;
+            color: var(--text-gray);
+            display: none;
+            border-top: 1px solid #f0f0f0;
+            padding-top: 15px;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        .faq-item.active .faq-question {
+            color: var(--accent-color);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            font-size: 1.2rem;
+            margin-bottom: 20px;
+            color: white;
+            border-bottom: 2px solid var(--accent-color);
+            display: inline-block;
+            padding-bottom: 5px;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #bdc3c7;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #95a5a6;
+            font-size: 0.9rem;
+        }
+
+        /* Mobile Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .process-steps {
+                flex-direction: column;
+                gap: 30px;
+            }
+
+            .process-steps::before {
+                width: 2px;
+                height: 100%;
+                left: 50%;
+                top: 0;
+                transform: translateX(-50%);
+            }
+
+            .step-item {
+                display: flex;
+                align-items: center;
+                gap: 20px;
+                text-align: left;
+            }
+
+            .step-icon {
+                margin: 0;
+                width: 50px;
+                height: 50px;
+                font-size: 1.2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <div class="container header-inner">
+            <div class="logo">
+                <span>纺织</span>优品
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#home">首页</a></li>
+                    <li><a href="#products">坯布产品</a></li>
+                    <li><a href="#categories">面料分类</a></li>
+                    <li><a href="#process">采购流程</a></li>
+                    <li><a href="#faq">常见问题</a></li>
+                </ul>
+            </nav>
+            <div class="header-contact">
+                <div class="phone-number">400-888-9999</div>
+                <a href="#contact" class="btn btn-primary">获取报价</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section id="home" class="hero">
+            <div class="container">
+                <h1>优质坯布供应商，源头工厂直销</h1>
+                <p>专注纺织面料生产与供应，提供全棉、涤棉、麻棉、色织等各类坯布。现货充足，支持定制，质量稳定，为您降低采购成本。</p>
+                <div class="hero-actions">
+                    <a href="#products" class="btn btn-primary">浏览库存</a>
+                    <a href="#contact" class="btn btn-outline">在线咨询</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features -->
+        <section class="features">
+            <div class="container">
+                <div class="features-grid">
+                    <div class="feature-card">
+                        <div class="feature-icon">🏭</div>
+                        <h3>源头工厂</h3>
+                        <p>自有纺织工厂，无中间商差价，直接对接客户，确保价格优势与交期稳定。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">✂️</div>
+                        <h3>定制加工</h3>
+                        <p>支持克重、幅宽、门幅及纱支的个性化定制，满足不同服装品牌的设计需求。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🧪</div>
+                        <h3>品质检测</h3>
+                        <p>配备专业质检团队，严格把控染整工艺，确保坯布色牢度与物理指标达标。</p>
+                    </div>
+                    <div class="feature-card">
+                        <div class="feature-icon">🚚</div>
+                        <h3>物流配送</h3>
+                        <p>全国物流网络覆盖，支持多种运输方式，确保货物安全准时送达。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Categories -->
+        <section id="categories" class="categories">
+            <div class="container">
+                <div class="section-title">
+                    <h2>主营坯布分类</h2>
+                    <p>丰富的产品线，满足各类纺织需求</p>
+                </div>
+                <div class="category-grid">
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/cotton/400/500" alt="全棉坯布">
+                        <div class="category-overlay">
+                            <h3>全棉坯布</h3>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/terry/400/500" alt="毛巾布">
+                        <div class="category-overlay">
+                            <h3>毛巾布</h3>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/polyester/400/500" alt="涤棉坯布">
+                        <div class="category-overlay">
+                            <h3>涤棉坯布</h3>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/linen/400/500" alt="麻棉坯布">
+                        <div class="category-overlay">
+                            <h3>麻棉坯布</h3>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/yarn/400/500" alt="色织布">
+                        <div class="category-overlay">
+                            <h3>色织布</h3>
+                        </div>
+                    </div>
+                    <div class="category-item">
+                        <img src="https://picsum.photos/seed/velvet/400/500" alt="灯芯绒">
+                        <div class="category-overlay">
+                            <h3>灯芯绒</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products -->
+        <section id="products" class="products">
+            <div class="container">
+                <div class="section-title">
+                    <h2>热销坯布产品</h2>
+                    <p>精选库存与新款，欢迎联系索取详细参数与报价单</p>
+                </div>
+                <div class="product-grid">
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://picsum.photos/seed/fabric1/300/300" alt="32支全棉丝光坯布">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">32支全棉丝光坯布</h3>
+                            <div class="product-specs">
+                                <span class="spec-tag">全棉</span>
+                                <span class="spec-tag">丝光</span>
+                                <span class="spec-tag">160GSM</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="price">询价</span>
+                                <a href="#contact" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">联系客服</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://picsum.photos/seed/fabric2/300/300" alt="45/55涤棉斜纹布">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">45/55涤棉斜纹布</h3>
+                            <div class="product-specs">
+                                <span class="spec-tag">涤棉</span>
+                                <span class="spec-tag">斜纹</span>
+                                <span class="spec-tag">220GSM</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="price">询价</span>
+                                <a href="#contact" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">联系客服</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://picsum.photos/seed/fabric3/300/300" alt="粗支精梳棉平布">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">粗支精梳棉平布</h3>
+                            <div class="product-specs">
+                                <span class="spec-tag">粗支</span>
+                                <span class="spec-tag">精梳</span>
+                                <span class="spec-tag">240GSM</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="price">询价</span>
+                                <a href="#contact" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">联系客服</a>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-img">
+                            <img src="https://picsum.photos/seed/fabric4/300/300" alt="人棉贡缎坯布">
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-title">人棉贡缎坯布</h3>
+                            <div class="product-specs">
+                                <span class="spec-tag">人棉</span>
+                                <span class="spec-tag">贡缎</span>
+                                <span class="spec-tag">180GSM</span>
+                            </div>
+                            <div class="product-footer">
+                                <span class="price">询价</span>
+                                <a href="#contact" class="btn btn-outline" style="padding: 5px 15px; font-size: 0.9rem;">联系客服</a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                <div style="text-align: center; margin-top: 40px;">
+                    <a href="#contact" class="btn btn-primary">下载完整产品目录</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Process -->
+        <section id="process" class="process-section">
+            <div class="container">
+                <div class="section-title">
+                    <h2>采购流程</h2>
+                    <p>简单四步，轻松获取您的定制坯布</p>
+                </div>
+                <div class="process-steps">
+                    <div class="step-item">
+                        <div class="step-icon">1</div>
+                        <h3>需求沟通</h3>
+                        <p>提供面料用途、克重、幅宽及纱支要求。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">2</div>
+                        <h3>报价确认</h3>
+                        <p>工厂核算成本，提供样品及详细报价单。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">3</div>
+                        <h3>打样确认</h3>
+                        <p>寄送小样，确认色卡与手感，签订合同。</p>
+                    </div>
+                    <div class="step-item">
+                        <div class="step-icon">4</div>
+                        <h3>批量生产</h3>
+                        <p>安排大货生产，质检发货，售后跟踪。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ -->
+        <section id="faq" class="faq">
+            <div class="container">
+                <div class="section-title">
+                    <h2>常见问题解答</h2>
+                </div>
+                <div class="faq-container">
+                    <div class="faq-item">
+                        <div class="faq-question">起订量是多少？ <span>+</span></div>
+                        <div class="faq-answer">一般常规坯布起订量为1000米，特殊克重或定制产品起订量可能有所调整，具体请咨询客服。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">支持寄送样品吗？ <span>+</span></div>
+                        <div class="faq-answer">支持。您可以提供色卡或具体要求，我们将为您安排寄送小样，运费需您先行承担。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">交货周期通常需要多久？ <span>+</span></div>
+                        <div class="faq-answer">常规坯布现货交货期约3-5天，定制大货通常需要15-30天，具体视订单量而定。</div>
+                    </div>
+                    <div class="faq-item">
+                        <div class="faq-question">付款方式有哪些？ <span>+</span></div>
+                        <div class="faq-answer">支持银行转账、支付宝、微信支付及信用证等常见方式，合同签订前可协商具体条款。</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact CTA -->
+        <section id="contact" style="padding: 80px 0; background-color: var(--primary-color); color: white; text-align: center;">
+            <div class="container">
+                <h2 style="margin-bottom: 20px;">立即联系获取报价</h2>
+                <p style="margin-bottom: 30px; opacity: 0.9;">无论您是寻找现货还是需要定制，我们都有专业团队为您服务</p>
+                <div style="font-size: 1.5rem; font-weight: bold; margin-bottom: 30px;">
+                    400-888-9999
+                </div>
+                <div style="display: flex; gap: 15px; justify-content: center; flex-wrap: wrap;">
+                    <a href="tel:4008889999" class="btn btn-primary">拨打电话</a>
+                    <a href="mailto:info@textile-supplier.com" class="btn btn-outline" style="border-color: white; color: white;">发送邮件</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h4>关于我们</h4>
+                    <p style="color: #bdc3c7; font-size: 0.9rem; line-height: 1.8;">
+                        我们是一家集研发、生产、销售于一体的现代化纺织企业，致力于为客户提供高品质、高性价比的坯布产品。多年来，我们赢得了国内外众多服装品牌的信赖。
+                    </p>
+                </div>
+                <div class="footer-col">
+                    <h4>快速链接</h4>
+                    <ul class="footer-links">
+                        <li><a href="#home">首页</a></li>
+                        <li><a href="#products">产品中心</a></li>
+                        <li><a href="#process">生产流程</a></li>
+                        <li><a href="#faq">常见问题</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>产品分类</h4>
+                    <ul class="footer-links">
+                        <li><a href="#">全棉坯布</a></li>
+                        <li><a href="#">涤棉坯布</a></li>
+                        <li><a href="#">麻棉坯布</a></li>
+                        <li><a href="#">毛纺面料</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h4>联系方式</h4>
+                    <ul class="footer-links">
+                        <li>电话：400-888-9999</li>
+                        <li>邮箱：sales@textile-example.com</li>
+                        <li>地址：中国纺织产业园区A栋</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 坯布供应商 - 纺织优品. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // FAQ Accordion Logic
+        document.addEventListener('DOMContentLoaded', function() {
+            const faqItems = document.querySelectorAll('.faq-item');
+            
+            faqItems.forEach(item => {
+                const question = item.querySelector('.faq-question');
+                question.addEventListener('click', () => {
+                    // Close other items
+                    faqItems.forEach(otherItem => {
+                        if (otherItem !== item) {
+                            otherItem.classList.remove('active');
+                        }
+                    });
+                    // Toggle current item
+                    item.classList.toggle('active');
+                });
+            });
+
+            // Smooth scroll for anchor links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+                    if (targetId === '#') return;
+                    
+                    const targetElement = document.querySelector(targetId);
+                    if (targetElement) {
+                        targetElement.scrollIntoView({
+                            behavior: 'smooth',
+                            block: 'start'
+                        });
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+                      </html>
