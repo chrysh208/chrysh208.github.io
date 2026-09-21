@@ -1,0 +1,794 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="24小时爆料观察室 - 揭秘社会热点，追踪娱乐八卦，深度解析新闻真相。全天候为您带来最新鲜、最犀利的观察报道。">
+    <meta name="keywords" content="24小时爆料观察室, 爆料, 娱乐新闻, 社会热点, 深度观察, 资讯">
+    <title>24小时爆料观察室-深度追踪社会热点与娱乐真相</title>
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --accent-color: #f1faee;
+            --text-dark: #333333;
+            --text-gray: #666666;
+            --bg-light: #f8f9fa;
+            --border-color: #e0e0e0;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-dark);
+            background-color: #fff;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        a:hover {
+            color: var(--primary-color);
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 2px 8px;
+            font-size: 12px;
+            font-weight: bold;
+            border-radius: 4px;
+            color: #fff;
+            margin-right: 8px;
+        }
+
+        .badge-hot { background-color: var(--primary-color); }
+        .badge-new { background-color: #457b9d; }
+        .badge-deep { background-color: #a8dadc; color: var(--secondary-color); }
+
+        /* Header */
+        header {
+            background-color: #fff;
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .header-top {
+            background-color: var(--secondary-color);
+            color: #fff;
+            font-size: 12px;
+            padding: 6px 0;
+        }
+
+        .header-top .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .header-main {
+            padding: 15px 0;
+        }
+
+        .header-main .container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--secondary-color);
+            letter-spacing: -0.5px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-weight: 600;
+            font-size: 16px;
+            color: var(--text-dark);
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: var(--primary-color);
+            transition: width 0.3s;
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .live-indicator {
+            display: flex;
+            align-items: center;
+            gap: 6px;
+            color: var(--primary-color);
+            font-weight: bold;
+            font-size: 14px;
+        }
+
+        .live-dot {
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+            animation: pulse 1.5s infinite;
+        }
+
+        @keyframes pulse {
+            0% { box-shadow: 0 0 0 0 rgba(230, 57, 70, 0.7); }
+            70% { box-shadow: 0 0 0 6px rgba(230, 57, 70, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(230, 57, 70, 0); }
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background-color: #000;
+            overflow: hidden;
+            margin-bottom: 40px;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            opacity: 0.7;
+            filter: grayscale(30%);
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 10;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            padding: 40px;
+            color: #fff;
+            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.2) 100%);
+        }
+
+        .hero-title {
+            font-size: 48px;
+            font-weight: 900;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 2px 10px rgba(0,0,0,0.5);
+        }
+
+        .hero-desc {
+            font-size: 18px;
+            max-width: 700px;
+            margin-bottom: 30px;
+            color: #ddd;
+        }
+
+        .hero-tags {
+            display: flex;
+            gap: 10px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-weight: bold;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+        }
+
+        .btn-primary:hover {
+            background-color: #c92a37;
+            transform: translateY(-2px);
+        }
+
+        /* Main Content Layout */
+        .main-layout {
+            display: grid;
+            grid-template-columns: 2.5fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        /* Section Styles */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            border-bottom: 2px solid var(--border-color);
+            padding-bottom: 10px;
+        }
+
+        .section-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: var(--secondary-color);
+            position: relative;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            bottom: -12px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+        }
+
+        .view-all {
+            font-size: 14px;
+            color: var(--text-gray);
+        }
+
+        /* Article Grid */
+        .article-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+        }
+
+        .article-card {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            overflow: hidden;
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .article-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+        }
+
+        .card-meta {
+            font-size: 12px;
+            color: var(--text-gray);
+            margin-bottom: 10px;
+        }
+
+        .card-title {
+            font-size: 18px;
+            font-weight: 700;
+            margin-bottom: 10px;
+            line-height: 1.4;
+            color: var(--text-dark);
+        }
+
+        .card-excerpt {
+            font-size: 14px;
+            color: var(--text-gray);
+            margin-bottom: 15px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 12px;
+            color: #999;
+        }
+
+        /* Sidebar */
+        .sidebar-widget {
+            background: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 30px;
+        }
+
+        .rank-list {
+            counter-reset: rank;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 20px;
+            padding-bottom: 15px;
+            border-bottom: 1px dashed var(--border-color);
+        }
+
+        .rank-item:last-child {
+            margin-bottom: 0;
+            padding-bottom: 0;
+            border-bottom: none;
+        }
+
+        .rank-item::before {
+            counter-increment: rank;
+            content: counter(rank);
+            font-size: 18px;
+            font-weight: 800;
+            color: #ccc;
+            margin-right: 12px;
+            min-width: 20px;
+            text-align: center;
+        }
+
+        .rank-item:nth-child(1)::before { color: #ffd700; }
+        .rank-item:nth-child(2)::before { color: #c0c0c0; }
+        .rank-item:nth-child(3)::before { color: #cd7f32; }
+
+        .rank-title {
+            font-size: 15px;
+            font-weight: 600;
+            line-height: 1.4;
+        }
+
+        .rank-title:hover {
+            color: var(--primary-color);
+        }
+
+        /* Live Ticker */
+        .ticker-wrap {
+            width: 100%;
+            overflow: hidden;
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 10px 0;
+            margin-bottom: 40px;
+        }
+
+        .ticker {
+            display: inline-block;
+            white-space: nowrap;
+            animation: ticker 30s linear infinite;
+        }
+
+        .ticker-item {
+            display: inline-block;
+            padding: 0 2rem;
+            font-size: 14px;
+        }
+
+        @keyframes ticker {
+            0% { transform: translate3d(0, 0, 0); }
+            100% { transform: translate3d(-100%, 0, 0); }
+        }
+
+        /* Topics Cloud */
+        .topic-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .topic-tag {
+            padding: 6px 12px;
+            background-color: var(--bg-light);
+            border-radius: 20px;
+            font-size: 13px;
+            color: var(--text-dark);
+            transition: all 0.2s;
+        }
+
+        .topic-tag:hover {
+            background-color: var(--primary-color);
+            color: #fff;
+        }
+
+        /* Footer */
+        footer {
+            background-color: #1d3557;
+            color: #fff;
+            padding: 60px 0 20px;
+            margin-top: 60px;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-info p {
+            margin-top: 15px;
+            color: #a8dadc;
+            font-size: 14px;
+            line-height: 1.8;
+        }
+
+        .footer-col h3 {
+            font-size: 18px;
+            margin-bottom: 20px;
+            color: #fff;
+        }
+
+        .footer-links li {
+            margin-bottom: 10px;
+        }
+
+        .footer-links a {
+            color: #a8dadc;
+            font-size: 14px;
+        }
+
+        .footer-links a:hover {
+            color: #fff;
+            padding-left: 5px;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            font-size: 13px;
+            color: #8d99ae;
+        }
+
+        /* Responsive */
+        @media (max-width: 992px) {
+            .main-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .article-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                display: none;
+            }
+            
+            .header-top {
+                display: none;
+            }
+
+            .hero {
+                height: 350px;
+            }
+
+            .hero-title {
+                font-size: 28px;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="header-top">
+        <div class="container">
+            <span>新闻热线：400-123-4567</span>
+            <div class="social-links">
+                <span>关注我们：微博 | 微信 | 抖音</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header>
+        <div class="header-main">
+            <div class="container">
+                <a href="#" class="logo">24小时<span>爆料观察室</span></a>
+                <nav>
+                    <ul>
+                        <li><a href="#">首页</a></li>
+                        <li><a href="#">社会热点</a></li>
+                        <li><a href="#">娱乐追踪</a></li>
+                        <li><a href="#">深度调查</a></li>
+                        <li><a href="#">国际视野</a></li>
+                    </ul>
+                </nav>
+                <div class="live-indicator">
+                    <div class="live-dot"></div>
+                    <span>实时直播中</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Ticker -->
+    <div class="ticker-wrap">
+        <div class="ticker">
+            <div class="ticker-item">🔴 突发：某地发生重大交通事故，相关部门已介入调查</div>
+            <div class="ticker-item">🟠 热点：某知名艺人深夜发布声明，否认不实传闻</div>
+            <div class="ticker-item">🔵 最新：气象台发布暴雨红色预警，请市民注意防范</div>
+            <div class="ticker-item">🟢 深度：独家探访：揭秘城市边缘的“隐形”社区</div>
+            <div class="ticker-item">🔴 突发：某地发生重大交通事故，相关部门已介入调查</div>
+            <div class="ticker-item">🟠 热点：某知名艺人深夜发布声明，否认不实传闻</div>
+            <div class="ticker-item">🔵 最新：气象台发布暴雨红色预警，请市民注意防范</div>
+            <div class="ticker-item">🟢 深度：独家探访：揭秘城市边缘的“隐形”社区</div>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <img src="https://picsum.photos/seed/news_hero/1600/900" alt="News Hero" class="hero-bg">
+        <div class="hero-content">
+            <span class="badge badge-hot" style="margin-bottom: 15px;">今日头条</span>
+            <h1 class="hero-title">揭秘“元宇宙”热潮下的虚假繁荣：资本狂欢背后的冷思考</h1>
+            <p class="hero-desc">随着虚拟现实技术的飞速发展，元宇宙概念席卷全球。然而，在资本的热捧之下，我们是否忽略了技术落地的真实困境？本观察室独家走访了多家科技企业，为您呈现最真实的行业现状。</p>
+            <div class="hero-tags">
+                <a href="#" class="btn btn-primary">阅读全文</a>
+                <a href="#" class="btn" style="background:rgba(255,255,255,0.2); color:#fff; border:1px solid #fff;">查看评论</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="container main-layout">
+        <!-- Left Column -->
+        <div class="content-area">
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">最新爆料</h2>
+                    <a href="#" class="view-all">更多 &gt;</a>
+                </div>
+                <div class="article-grid">
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/tech1/600/400" alt="Article Image" class="card-img">
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span class="badge badge-new">科技前沿</span>
+                                <span>10分钟前</span>
+                            </div>
+                            <h3 class="card-title"><a href="#">国产芯片突破封锁：新一代制程工艺研发取得关键性进展</a></h3>
+                            <p class="card-excerpt">在经历了长时间的“卡脖子”困境后，国内半导体产业链正在加速整合。最新数据显示，国产成熟制程芯片良率已提升至行业领先水平。</p>
+                            <div class="card-footer">
+                                <span>作者：观察员小王</span>
+                                <span>👁 1.2万</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/ent1/600/400" alt="Article Image" class="card-img">
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span class="badge badge-hot">娱乐追踪</span>
+                                <span>35分钟前</span>
+                            </div>
+                            <h3 class="card-title"><a href="#">某知名导演新片选角风波：多位流量明星争抢女主角</a></h3>
+                            <p class="card-excerpt">备受期待的新年大片近日曝光了部分选角信息，引发全网热议。对于片方坚持“演技优先”的选角标准，网友看法不一。</p>
+                            <div class="card-footer">
+                                <span>作者：娱记老张</span>
+                                <span>👁 8.5千</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/society1/600/400" alt="Article Image" class="card-img">
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span class="badge badge-deep">社会民生</span>
+                                <span>1小时前</span>
+                            </div>
+                            <h3 class="card-title"><a href="#">城市夜归人：外卖骑手的生存现状与权益保障调查</a></h3>
+                            <p class="card-excerpt">为了按时送达订单，外卖骑手们往往要在高峰期穿梭于车流中。本报记者深入一线，记录下这群“城市摆渡人”的真实生活。</p>
+                            <div class="card-footer">
+                                <span>作者：调查组李四</span>
+                                <span>👁 3.2万</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/eco1/600/400" alt="Article Image" class="card-img">
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span class="badge badge-new">绿色生活</span>
+                                <span>2小时前</span>
+                            </div>
+                            <h3 class="card-title"><a href="#">新能源汽车下乡：充电桩覆盖率成最大痛点</a></h3>
+                            <p class="card-excerpt">政策利好频出，但农村地区的充电设施建设仍显滞后。如何打通新能源汽车推广的“最后一公里”成为亟待解决的问题。</p>
+                            <div class="card-footer">
+                                <span>作者：环保观察员</span>
+                                <span>👁 9千</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section style="margin-top: 60px;">
+                <div class="section-header">
+                    <h2 class="section-title">深度观察</h2>
+                    <a href="#" class="view-all">更多 &gt;</a>
+                </div>
+                <div class="article-grid">
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/deep1/600/400" alt="Article Image" class="card-img">
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span class="badge badge-deep">深度评论</span>
+                            </div>
+                            <h3 class="card-title"><a href="#">从“内卷”到“躺平”：当代年轻人的心理突围战</a></h3>
+                            <p class="card-excerpt">社会竞争压力的加剧，让“内卷”成为热词。而随之而来的“躺平”现象，究竟是消极逃避，还是一种无声的抗议？</p>
+                            <div class="card-footer">
+                                <span>作者：资深评论员</span>
+                                <span>👁 5.6万</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="article-card">
+                        <img src="https://picsum.photos/seed/deep2/600/400" alt="Article Image" class="card-img">
+                        <div class="card-body">
+                            <div class="card-meta">
+                                <span class="badge badge-deep">深度评论</span>
+                            </div>
+                            <h3 class="card-title"><a href="#">短视频时代：我们正在失去专注力吗？</a></h3>
+                            <p class="card-excerpt">碎片化的信息流正在重塑我们的认知习惯。当15秒的快乐成为常态，深度阅读是否还有生存空间？</p>
+                            <div class="card-footer">
+                                <span>作者：文化观察员</span>
+                                <span>👁 4.1万</span>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </section>
+        </div>
+
+        <!-- Right Sidebar -->
+        <aside class="sidebar">
+            <!-- Hot Ranking -->
+            <div class="sidebar-widget">
+                <h3 class="section-title" style="font-size: 18px; margin-bottom: 20px;">24小时热搜榜</h3>
+                <div class="rank-list">
+                    <a href="#" class="rank-item">
+                        <div class="rank-title">某地突发暴雨，交通大面积延误</div>
+                    </a>
+                    <a href="#" class="rank-item">
+                        <div class="rank-title">教育部最新通知：中小学延时服务调整</div>
+                    </a>
+                    <a href="#" class="rank-item">
+                        <div class="rank-title">某上市公司涉嫌财务造假，股价跌停</div>
+                    </a>
+                    <a href="#" class="rank-item">
+                        <div class="rank-title">科幻电影《流浪地球3》定档春节</div>
+                    </a>
+                    <a href="#" class="rank-item">
+                        <div class="rank-title">专家呼吁：警惕网络电信诈骗新手段</div>
+                    </a>
+                    <a href="#" class="rank-item">
+                        <div class="rank-title">国产大飞机C919交付数量再创新高</div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Topics Cloud -->
+            <div class="sidebar-widget">
+                <h3 class="section-title" style="font-size: 18px; margin-bottom: 20px;">热门话题</h3>
+                <div class="topic-cloud">
+                    <a href="#" class="topic-tag">#科技改变生活#</a>
+                    <a href="#" class="topic-tag">#娱乐圈大瓜#</a>
+                    <a href="#" class="topic-tag">#职场生存指南#</a>
+                    <a href="#" class="topic-tag">#国际局势#</a>
+                    <a href="#" class="topic-tag">#健康养生#</a>
+                    <a href="#" class="topic-tag">#美食探店#</a>
+                    <a href="#" class="topic-tag">#旅游攻略#</a>
+                    <a href="#" class="topic-tag">#汽车资讯#</a>
+                    <a href="#" class="topic-tag">#房产风云#</a>
+                </div>
+            </div>
+
+            <!-- Ad Placeholder -->
+            <div class="sidebar-widget" style="background-color: #f1f1f1; display: flex; align-items: center; justify-content: center; min-height: 250px; color: #999; font-size: 14px;">
+                广告位招商
+            </div>
+        </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-info">
+                    <h2 class="logo" style="font-size: 24px; margin-bottom: 10px;">24小时<span>爆料观察室</span></h2>
+                    <p>致力于提供客观、真实、有深度的新闻报道。我们坚持新闻专业主义，拒绝标题党，还原事件真相，关注社会民生。</p>
+                </div>
+                <div class="footer-col">
+                    <h3>快速导航</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">关于我们</a></li>
+                        <li><a href="#">新闻爆料</a></li>
+                        <li><a href="#">加入我们</a></li>
+                        <li><a href="#">免责声明</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h3>联系方式</h3>
+                    <ul class="footer-links">
+                        <li><a href="#">邮箱：contact@example.com</a></li>
+                        <li><a href="#">电话：010-12345678</a></li>
+                        <li><a href="#">地址：北京市朝阳区新闻大厦</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 24小时爆料观察室 版权所有 | 京ICP备12345678号</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+  </html>
