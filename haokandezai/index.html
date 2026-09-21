@@ -1,0 +1,631 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>好看的灾难片-顶级灾难片推荐与观影指南</title>
+    <meta name="description" content="本站为您提供最新最全的好看的灾难片推荐，涵盖火山爆发、海啸、地震、末日灾难等类型。包含经典高分灾难电影清单、灾难片观影指南、特效解析及观影注意事项。">
+    <meta name="keywords" content="好看的灾难片,灾难片推荐,高分灾难电影,灾难片排行榜,末日电影">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #e63946;
+            --secondary-color: #1d3557;
+            --accent-color: #f1faee;
+            --text-color: #333;
+            --text-light: #666;
+            --bg-color: #f8f9fa;
+            --card-bg: #ffffff;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans SC", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Header & Nav */
+        header {
+            background-color: var(--card-bg);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-inner {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 2rem;
+        }
+
+        nav a {
+            font-weight: 500;
+            color: var(--secondary-color);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            position: relative;
+            height: 500px;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://picsum.photos/seed/disasterhero/1920/1080.jpg') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: #fff;
+            padding: 0 2rem;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            animation: fadeIn 1s ease-out;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            text-shadow: 0 2px 4px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.25rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 0.8rem 2rem;
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: 4px;
+            font-weight: 600;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .btn:hover {
+            background-color: #d62828;
+            transform: translateY(-2px);
+        }
+
+        /* Layout Container */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 3rem 2rem;
+        }
+
+        /* Section Styling */
+        .section-title {
+            font-size: 2rem;
+            color: var(--secondary-color);
+            margin-bottom: 2rem;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background-color: var(--primary-color);
+        }
+
+        /* Movie Grid */
+        .movie-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+        }
+
+        .movie-card {
+            background: var(--card-bg);
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .movie-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+        }
+
+        .card-img {
+            height: 400px;
+            width: 100%;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-meta {
+            font-size: 0.85rem;
+            color: var(--text-light);
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .tag {
+            background-color: #ffe5e5;
+            color: var(--primary-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 3px;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
+            color: var(--secondary-color);
+        }
+
+        .card-desc {
+            font-size: 0.95rem;
+            color: var(--text-light);
+            margin-bottom: 1.5rem;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            flex-grow: 1;
+        }
+
+        .card-footer {
+            margin-top: auto;
+            border-top: 1px solid #eee;
+            padding-top: 1rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .rating {
+            color: #f1c40f;
+            font-weight: bold;
+        }
+
+        .btn-sm {
+            padding: 0.4rem 1rem;
+            font-size: 0.9rem;
+            border: 1px solid var(--secondary-color);
+            color: var(--secondary-color);
+        }
+
+        .btn-sm:hover {
+            background-color: var(--secondary-color);
+            color: white;
+        }
+
+        /* Category List */
+        .category-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 2rem;
+        }
+
+        .category-item {
+            padding: 0.6rem 1.2rem;
+            background-color: white;
+            border: 1px solid #ddd;
+            border-radius: 50px;
+            color: var(--text-light);
+            transition: all 0.3s;
+        }
+
+        .category-item:hover {
+            border-color: var(--primary-color);
+            color: var(--primary-color);
+        }
+
+        /* Guide Section */
+        .guide-section {
+            background-color: white;
+            padding: 3rem;
+            border-radius: 8px;
+            margin-top: 4rem;
+        }
+
+        .guide-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 3rem;
+        }
+
+        .guide-item h3 {
+            color: var(--secondary-color);
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .guide-item h3::before {
+            content: '';
+            display: block;
+            width: 8px;
+            height: 8px;
+            background-color: var(--primary-color);
+            border-radius: 50%;
+        }
+
+        /* FAQ Section */
+        .faq-container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        details {
+            background-color: white;
+            margin-bottom: 1rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+            overflow: hidden;
+        }
+
+        summary {
+            padding: 1.2rem;
+            cursor: pointer;
+            font-weight: 600;
+            color: var(--secondary-color);
+            list-style: none;
+            position: relative;
+            padding-right: 2.5rem;
+        }
+
+        summary::-webkit-details-marker {
+            display: none;
+        }
+
+        summary::after {
+            content: '+';
+            position: absolute;
+            right: 1.2rem;
+            font-size: 1.5rem;
+            line-height: 1;
+            color: var(--primary-color);
+        }
+
+        details[open] summary::after {
+            content: '-';
+        }
+
+        .faq-content {
+            padding: 0 1.2rem 1.2rem 1.2rem;
+            color: var(--text-light);
+            border-top: 1px solid #f0f0f0;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--secondary-color);
+            color: #fff;
+            padding: 3rem 2rem 1rem;
+            margin-top: 4rem;
+        }
+
+        .footer-grid {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            margin-bottom: 1.2rem;
+            color: var(--primary-color);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.6rem;
+        }
+
+        .footer-col ul li a {
+            color: #ccc;
+        }
+
+        .footer-col ul li a:hover {
+            color: #fff;
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 1.5rem;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: #888;
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            
+            nav ul {
+                gap: 1rem;
+                font-size: 0.9rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .guide-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .movie-grid {
+                grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+            }
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="header-inner">
+        <a href="#" class="logo">
+            <span>★</span> 灾难视界
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#rank">高分榜单</a></li>
+                <li><a href="#guide">观影指南</a></li>
+                <li><a href="#category">分类浏览</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main>
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探索震撼人心的<br>好看的灾难片世界</h1>
+            <p>从火山爆发到外星入侵，从深海巨兽到末日废土。精选全球顶级灾难电影，带您体验视觉奇观与人性光辉的碰撞。</p>
+            <a href="#rank" class="btn">立即开始观影</a>
+        </div>
+    </section>
+
+    <div class="container">
+        <!-- Category Filter -->
+        <section id="category" class="category-section">
+            <div class="category-list">
+                <a href="#" class="category-item">🔥 热门推荐</a>
+                <a href="#" class="category-item">🌋 地质灾难</a>
+                <a href="#" class="category-item">🌊 海洋灾难</a>
+                <a href="#" class="category-item">☄️ 天文灾难</a>
+                <a href="#" class="category-item">🦠 生态灾难</a>
+                <a href="#" class="category-item">☢️ 核能与生化</a>
+                <a href="#" class="category-item">👽 虫族入侵</a>
+            </div>
+        </section>
+
+        <!-- Featured Movies -->
+        <section id="rank" class="movie-section">
+            <h2 class="section-title">年度必看高分灾难片</h2>
+            <div class="movie-grid">
+                <!-- Movie 1 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/earthquake/400/600.jpg" alt="2012" class="card-img">
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="tag">地质灾难</span>
+                            <span>2009</span>
+                        </div>
+                        <h3 class="card-title">2012</h3>
+                        <p class="card-desc">基于玛雅预言，全球各地发生剧烈地质变化，人类面临灭顶之灾。影片以宏大的灾难场面和史诗般的救援行动著称，是灾难片迷的必看之作。</p>
+                        <div class="card-footer">
+                            <span class="rating">★★★★☆</span>
+                            <a href="#" class="btn btn-sm">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie 2 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/titanic/400/600.jpg" alt="泰坦尼克号" class="card-img">
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="tag">海难</span>
+                            <span>1997</span>
+                        </div>
+                        <h3 class="card-title">泰坦尼克号</h3>
+                        <p class="card-desc">不仅是爱情史诗，也是一场惊心动魄的海难灾难。冰山撞击、船体倾斜、乘客恐慌，每一帧都充满了紧张感，是灾难片与爱情片结合的巅峰。</p>
+                        <div class="card-footer">
+                            <span class="rating">★★★★★</span>
+                            <a href="#" class="btn btn-sm">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie 3 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/inferno/400/600.jpg" alt="后天" class="card-img">
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="tag">气候灾难</span>
+                            <span>2004</span>
+                        </div>
+                        <h3 class="card-title">后天</h3>
+                        <p class="card-desc">导演罗兰·艾默里奇继《独立日》后的又一力作。全球气候系统崩溃，瞬间进入冰河世纪。影片对环境变暖的警示至今仍具有现实意义。</p>
+                        <div class="card-footer">
+                            <span class="rating">★★★★☆</span>
+                            <a href="#" class="btn btn-sm">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Movie 4 -->
+                <article class="movie-card">
+                    <img src="https://picsum.photos/seed/meteor/400/600.jpg" alt="世界末日" class="card-img">
+                    <div class="card-body">
+                        <div class="card-meta">
+                            <span class="tag">天文灾难</span>
+                            <span>1998</span>
+                        </div>
+                        <h3 class="card-title">世界末日</h3>
+                        <p class="card-desc">一颗巨大的陨石即将撞击地球，一支精英小队必须深入地心引爆核弹。硬汉派灾难片，充满了动作戏和工业美感。</p>
+                        <div class="card-footer">
+                            <span class="rating">★★★★☆</span>
+                            <a href="#" class="btn btn-sm">查看详情</a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- Guide Section -->
+        <section id="guide" class="guide-section">
+            <h2 class="section-title">灾难片观影指南</h2>
+            <div class="guide-grid">
+                <div class="guide-item">
+                    <h3>如何选择适合自己的灾难片？</h3>
+                    <p>灾难片通常分为硬核写实类（如《海神号》）和特效夸张类（如《哥斯拉》）。如果您偏爱真实感，建议关注IMDb评分较高的地质和气象类影片；如果您追求视觉爽感，科幻灾难片是更好的选择。</p>
+                </div>
+                <div class="guide-item">
+                    <h3>观看灾难片的注意事项</h3>
+                    <p>由于部分影片包含密闭空间、高空坠落或爆炸等惊悚画面，建议在光线充足、环境舒适的情况下观看。观看后若感到压抑，可观看喜剧片或轻松的纪录片调节心情。</p>
+                </div>
+                <div class="guide-item">
+                    <h3>经典灾难片系列推荐</h3>
+                    <p>除了单部影片，灾难系列电影如《后天》、《2012》、《龙卷风》也值得收藏。这些系列电影通常拥有统一的制作水准和核心团队，观影体验连贯且震撼。</p>
+                </div>
+                <div class="guide-item">
+                    <h3>灾难片中的情感内核</h3>
+                    <p>优秀的灾难片不仅仅是特效的堆砌，更是在极端环境下对人性的探讨。无论是亲情、爱情还是牺牲精神，这些情感元素往往比灾难场面更能打动观众。</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-container">
+            <h2 class="section-title" style="text-align: center;">常见问题解答</h2>
+            <details>
+                <summary>好看的灾难片有哪些类型？</summary>
+                <div class="faq-content">
+                    灾难片主要分为地质灾难（地震、火山）、气象灾难（龙卷风、洪水、冰河世纪）、天文灾难（陨石、彗星、外星入侵）、生化灾难（病毒、变异生物）以及核能灾难等。不同类型侧重不同的视觉奇观和叙事主题。
+                </div>
+            </details>
+            <details>
+                <summary>哪里可以在线观看这些灾难片？</summary>
+                <div class="faq-content">
+                    本站提供正版灾难片推荐与相关资源指引。建议通过正规的流媒体平台（如Netflix、爱奇艺、腾讯视频等）搜索片名观看，以获得最佳的音画体验并支持创作者。
+                </div>
+            </details>
+            <details>
+                <summary>灾难片适合全家观看吗？</summary>
+                <div class="faq-content">
+                    这取决于具体的影片。传统的灾难片如《泰坦尼克号》、《狮子王》等适合全家观看。但部分包含暴力、血腥或极度惊悚画面的硬核灾难片（如《异形》系列部分、《切尔诺贝利》），建议青少年及儿童在家长陪同下观看。
+                </div>
+            </details>
+            <details>
+                <summary>为什么有些灾难片评价很高？</summary>
+                <div class="faq-content">
+                    高评价的灾难片通常具备三点：一是视觉特效震撼，能够营造真实的临场感；二是剧本扎实，角色塑造丰满，灾难只是背景；三是主题深刻，往往探讨了人类在自然面前的渺小与勇气。
+                </div>
+            </details>
+        </section>
+    </div>
+</main>
+
+<footer>
+    <div class="footer-grid">
+        <div class="footer-col">
+            <h4>关于本站</h4>
+            <p style="color: #ccc; font-size: 0.9rem;">专注收录全球优质好看的灾难片，为您提供专业的观影指南与分类推荐。</p>
+        </div>
+        <div class="footer-col">
+            <h4>热门分类</h4>
+            <ul>
+                <li><a href="#">地质灾难</a></li>
+                <li><a href="#">海洋灾难</a></li>
+                <li><a href="#">科幻灾难</a></li>
+                <li><a href="#">经典老片</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>快速导航</h4>
+            <ul>
+                <li><a href="#">排行榜</a></li>
+                <li><a href="#">新片上映</a></li>
+                <li><a href="#">影评专栏</a></li>
+                <li><a href="#">联系我们</a></li>
+            </ul>
+        </div>
+    </div>
+    <div class="copyright">
+        &copy; 2023 灾难视界. All Rights Reserved. 本站内容仅供参考，版权归原作者所有。
+    </div>
+</footer>
+
+</body>
+</html>
